@@ -11,29 +11,18 @@ export class ItemService {
   private URL = "http://localhost:3000/posts"
   constructor(private http: HttpClient) { }
   getproductlist() {
-    return this.http.get<any>(this.URL).pipe(map((res: any) => {
-      return res;
-    }))
-  }
+    return this.http.get<any>(this.URL)}
   additem(data: any) {
-    return this.http.post<any>(this.URL, data).pipe(map((res: any) => {
-      return res;
-    }))
+    return this.http.post<any>(this.URL, data)
   }
   updateitem(data: any, id: any) {
-    return this.http.put<any>(this.URL +'/'+ id, data).pipe(map((res: any) => {
-      return res;
-    }))
+    return this.http.put<any>(this.URL +'/'+ id, data)
   }
   rejectitem(id: number) {
-    return this.http.delete<any>(this.URL +'/'+ id).pipe(map((res: any) => {
-      return res;
-    }))
+    return this.http.delete<any>(this.URL +'/'+ id)
   }
   getiditem(id: any) {
-    return this.http.get<any>(this.URL +'/'+ id).pipe(map((res: any) => {
-      return res;
-    }))
+    return this.http.get<any>(this.URL +'/'+ id)
   }
 
 }

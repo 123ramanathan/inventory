@@ -29,13 +29,6 @@
       "id": 5
     },
     {
-      "productName": "File Folders",
-      "category": "Filling",
-      "Productquantity": "15",
-      "Productprice": "5",
-      "id": 6
-    },
-    {
       "productName": "Letter Envelops",
       "category": "Mailing/Stationery",
       "Productquantity": 20,
@@ -74,8 +67,15 @@
       "productName": "scrap book",
       "category": "Paper Products",
       "Productquantity": "300",
-      "Productprice": "45",
+      "Productprice": "44",
       "id": 12
+    },
+    {
+      "productName": "Glitter sheet",
+      "category": "Printer",
+      "Productquantity": "45",
+      "Productprice": "10",
+      "id": 13
     }
   ],
   "comments": [],
