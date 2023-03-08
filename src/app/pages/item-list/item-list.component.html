@@ -1,0 +1,82 @@
+<!-- <nav class="navbar navbar-light bg-light">
+  <div class="container mt-3">
+    <a class="navbar-brand fw-bold fs-5"></a>
+    <form class="d-flex">
+      <button style="background-color:rgb(25,135,84);" class="btn btn-lg text-white" routerLink="/additem">
+        Add New Items +
+      </button>
+    </form>
+  </div>
+</nav> -->
+
+<nav class="navbar navbar-light bg-light justify-content-between">
+  <a class="navbar-brand"><i class="fa fa-file-text fs-3  ms-3" aria-hidden="true"></i><b class="ms-2">
+          Inventory List</b></a>
+  <div class="form-inline d-flex">
+      <button class="btn btn-outline-secondary add   me-5 my-2 my-sm-0 " routerLink="/additem">+ New Product</button>
+  </div>
+</nav>
+
+
+<div class="container mt-3">
+  <mat-form-field>
+    <mat-label>Filter</mat-label>
+    <div class="d-flex mt-5">
+      <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Pencils" #input><i class='bx bx-filter'></i>
+
+    </div>
+  </mat-form-field>
+
+  <div class="mat-elevation-z8 table-responsive">
+
+    <table mat-table [dataSource]="dataSource" matSort>
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>ID </th>
+        <td mat-cell *matCellDef="let row"> {{row.id}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="productName">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Product Name </th>
+        <td mat-cell *matCellDef="let row"> {{row.productName}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="category">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Category </th>
+        <td mat-cell *matCellDef="let row"> {{row.category}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Productquantity">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Product Quantity </th>
+        <td mat-cell *matCellDef="let row"> {{row.Productquantity}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Productprice">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Product Price </th>
+        <td mat-cell *matCellDef="let row"> {{row.Productprice}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="action">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Action </th>
+        <td mat-cell *matCellDef="let row">
+          <div>
+            <a routerLink='/additem/{{row.id}}' type="button"><i class='bx bxs-pencil edit' ></i></a>
+            <a class="delete">
+              <i class='bx bxs-trash reject mx-3' (click)="deleteproduct(row.id)" ></i>
+            </a>
+          </div>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+      <tr class="mat-row" *matNoDataRow>
+      <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+    </tr>
+    </table>
+
+    <div class="ms-5">
+      <mat-paginator #paginator  [pageSize]="5"></mat-paginator>
+     </div>
+  </div>
+</div>

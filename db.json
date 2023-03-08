@@ -1,0 +1,85 @@
+{
+  "posts": [
+    {
+      "productName": "Pens",
+      "category": "Desk Supplies",
+      "Productquantity": 27,
+      "Productprice": "5",
+      "id": 1
+    },
+    {
+      "productName": "Pencils",
+      "category": "Desk Supplies",
+      "Productquantity": "20",
+      "Productprice": "7",
+      "id": 2
+    },
+    {
+      "id": 4,
+      "productName": "Spiral Notebook",
+      "category": "Paper products",
+      "Productquantity": "20",
+      "Productprice": "5"
+    },
+    {
+      "productName": "Copy Paper",
+      "category": "Paper products",
+      "Productquantity": "12",
+      "Productprice": "20",
+      "id": 5
+    },
+    {
+      "productName": "File Folders",
+      "category": "Filling",
+      "Productquantity": "15",
+      "Productprice": "5",
+      "id": 6
+    },
+    {
+      "productName": "Letter Envelops",
+      "category": "Mailing/Stationery",
+      "Productquantity": 20,
+      "Productprice": 3,
+      "id": 7
+    },
+    {
+      "productName": "Bubble wrap",
+      "category": "Mailing/Stationery",
+      "Productquantity": 12,
+      "Productprice": 5,
+      "id": 8
+    },
+    {
+      "productName": "Ink/toner catridges",
+      "category": "Printer",
+      "Productquantity": "15",
+      "Productprice": "50",
+      "id": 9
+    },
+    {
+      "productName": "Price tags",
+      "category": "Identification",
+      "Productquantity": "45",
+      "Productprice": "5",
+      "id": 10
+    },
+    {
+      "productName": "Exam Pad",
+      "category": "Paper Products",
+      "Productquantity": "15",
+      "Productprice": "70",
+      "id": 11
+    },
+    {
+      "productName": "scrap book",
+      "category": "Paper Products",
+      "Productquantity": "300",
+      "Productprice": "45",
+      "id": 12
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}

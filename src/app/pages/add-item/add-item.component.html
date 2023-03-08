@@ -1,0 +1,99 @@
+<nav class="navbar navbar-light bg-light justify-content-between">
+    <a class="navbar-brand"><i class='bx bx-plus-medical fs-3 ms-3'></i><b class="ms-2 fs-5">
+            Add Product</b></a>
+    <div class="form-inline d-flex">
+        <button class="btn btn-outline-secondary add   me-5 my-2 my-sm-0 " routerLink="/itemlist">Manage Products</button>
+    </div>
+  </nav>
+
+<form (ngSubmit)="onSubmit()" [formGroup]="inventoryForm">
+    <section class="mt-5">
+        <div class="container">
+            <div class="row d-flex justify-content-center align-items-center">
+                <div class="col">
+                    <div class="card shadow card-registration my-4">
+                        <div class="row g-0">
+                            <div class="col-xl-6 d-none d-xl-block">
+                                <img src="https://jelvix.com/wp-content/uploads/2021/05/7.png" alt="Sample photo" class="img-fluid"
+                                    style="height: 550px ;width:750px;" />
+                            </div>
+                            <div class="col-xl-6 d-flex">
+                                <div class="card-body p-md-5 text-black">
+                                    <h3 class="mb-5 text-uppercase">Stationery Inventory</h3>
+                                    
+                                    <div class="">
+                                        <div class="col-md-9 mb-4">
+                                           
+                                            <div class="form-floating flex-fill mb-0">
+                                                <input type="text" class="form-control " formControlName="productName"
+                                                    [(ngModel)]="productsobj.productName" placeholder="product Name"
+                                                    [ngClass]="{ 'is-invalid': Submitted && f['productName'].errors || f['productName'].touched&& f['productName'].errors }" />
+                                                <label for="floatingInput">Product Name</label>
+                                                <div *ngIf="Submitted && f['productName'].errors|| f['productName'].touched&& f['productName'].errors"
+                                                    class="invalid-feedback">
+                                                    <div *ngIf="f['productName'].errors['required']">productName is required
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-9 mb-4">
+                                            
+                                            <div class="form-floating flex-fill mb-0">
+                                                <select class="form-select" formControlName="category" 
+                                                    [(ngModel)]="productsobj.category" aria-label="Default select example"
+                                                    [ngClass]="{ 'is-invalid': Submitted && f['category'].errors || f['category'].touched&& f['category'].errors }">
+    
+                                                    <option selected value="">Category</option>
+                                                    <option value="Desk Supplies">Desk Supplies</option>
+                                                    <option value="Paper Products">Paper Products</option>
+                                                    <option value="Filling">Filling</option>
+                                                    <option value="Mailing/Stationery">Mailing/Stationery</option>
+                                                    <option value="Printer">Printer</option>
+                                                    <option value="Identification">Identification</option>
+    
+                                                </select>
+                                                <label for="floatingSelect">Category</label>
+                                                <div *ngIf="Submitted && f['category'].errors|| f['category'].touched&& f['category'].errors"
+                                                    class="invalid-feedback">
+                                                    <div *ngIf="f['category'].errors['required']">category is required
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="">
+                                        <div class="col-md-9 mb-4">
+                                           
+                                            <div class="form-floating flex-fill mb-0">
+                                                <input type="text" class="form-control " formControlName="Productquantity"
+                                                    [(ngModel)]="productsobj.Productquantity" placeholder="Product Quantity" />
+                                                <label for="floatingInput">Product Quantity</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-9 mb-4">
+                                            
+                                            <div class="form-floating flex-fill mb-0">
+                                                <input type="text" class="form-control " formControlName="Productprice"
+                                                    [(ngModel)]="productsobj.Productprice" placeholder="Product Rate" />
+                                                <label for="floatingInput">Product Rate</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class=" justify-content-end pt-3">
+                                        <button type="reset" class="btn btn-danger btn-lg">Reset all</button>
+                                        <button type="submit" class="btn btn-success btn-lg ms-2">Submit</button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</form>
